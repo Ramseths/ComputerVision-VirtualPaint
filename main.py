@@ -9,6 +9,7 @@ cap.set(3, frameWidth)
 cap.set(4, frameHeight)
 cap.set(10, 150)
 
+# Se crea la lista con los colores necesarios
 lista_colores = [[5, 107, 0, 19, 255, 255],
                  [133, 56, 0, 159, 156, 255],
                  [57, 76, 0, 100, 255, 255]]
