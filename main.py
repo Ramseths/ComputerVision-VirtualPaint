@@ -16,10 +16,11 @@ lista_colores = [[5, 107, 0, 19, 255, 255],
 
 def encontrarColor(img, lista_colores):
     imgHSV = cv2.cvtColor(img, cv2.COLOR_BGR2HSV)
-    lower = np.array(lista_colores[0][0:3])
-    upper = np.array(lista_colores[0][3:6])
-    mask = cv2.inRange(imgHSV, lower, upper)
-    cv2.imshow("Mask", mask)
+    for color in lista_colores:
+        lower = np.array(color[0:3])
+        upper = np.array(color[3:6])
+        mask = cv2.inRange(imgHSV, lower, upper)
+        cv2.imshow(str(color[0]), mask)
 
 while True:
     success, img = cap.read()
